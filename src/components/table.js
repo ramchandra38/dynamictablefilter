@@ -62,9 +62,13 @@ class Table extends Component {
                 return item.following_count <= f.value;
             });
         });
+        if (filterValue.length >= 10) {
+            this.setState({
+                dummyData: filterValue
+            });
+        }
 
     }
-
     // render HTML
     render() {
         this.filterData();
